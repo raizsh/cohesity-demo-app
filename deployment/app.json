@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name" : "Demo-app",
+  "version" : 1,
+  "dev_version": 1.0,
+  "description" : "Demo-app: Demo app for building applications on Cohesity marketplace",
+  "access_requirements" : {
+    "read_access" : true,
+    "read_write_access" : false,
+    "management_access" : true
+  }
+}

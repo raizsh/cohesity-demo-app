@@ -1,0 +1,42 @@
+# Copyright 2022 Cohesity Inc.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-app-rest
+  labels:
+    app: demo-app
+spec:
+  type: NodePort
+  selector:
+    app: demo-app
+  ports:
+    - port: 8080
+      protocol: TCP
+      name: rest
+      cohesityTag: ui
+---
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: demo-app
+  labels:
+    app: demo-app
+spec:
+  replicas:
+    fixed: 1
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+        - name: demo-app
+          image: demo-app:latest
+          resources:
+            requests:
+              cpu: 500m
+              memory: 100Mi
