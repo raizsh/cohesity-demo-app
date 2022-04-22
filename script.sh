@@ -34,8 +34,8 @@
 set -e
 
 #APP Id and APP Version
-DEFAULT_APP_UID=14
-DEFAULT_APP_VERSION=1.0.11
+DEFAULT_APP_UID=4
+DEFAULT_APP_VERSION=1.0.1
 
 current_dir=$(dirname `readlink -f $0`)
 . $current_dir/common.sh
@@ -57,7 +57,7 @@ TEMP_DOCKER_IMG_DIR="/tmp"
 DEPLOYMENT_TOP_DIR="$current_dir/deployment"
 
 # Dockerfile Directories
-DEMO_APP_DEPLOYMENT_DIR="$DEPLOYMENT_TOP_DIR/demo-app"
+DEMO_APP_DEPLOYMENT_DIR="$DEPLOYMENT_TOP_DIR"
 
 # Temp Image Path
 DEMO_APP_TEMP_IMAGE_PATH="$TEMP_DOCKER_IMG_DIR/$DEMO_APP_IMAGE_NAME:$IMAGE_VERSION"

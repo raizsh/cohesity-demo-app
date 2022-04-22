@@ -4,7 +4,7 @@
 // Demo app web server that exposes apis to get views from the app,
 // list the views and browse the files and folders inside the view.
 
-package server
+package demoapp
 
 import (
   "encoding/json"
@@ -15,11 +15,11 @@ import (
   "path/filepath"
   "sync"
 
-  "cohesity-demo-app/data"
   appModels "github.com/cohesity/app-sdk-go/models"
   managementModels "github.com/cohesity/management-sdk-go/models"
   "github.com/go-martini/martini"
   "github.com/golang/glog"
+  "github.com/raizsh/cohesity-demo-app/data"
 )
 
 var (
