@@ -47,7 +47,7 @@ f_init_env ${DEFAULT_APP_UID} ${DEFAULT_APP_VERSION}
 # spec to use (pre QoS vs QoS).
 
 # Image Names
-DEMO_APP_IMAGE_NAME="demo_app_server"
+DEMO_APP_IMAGE_NAME="demo_app"
 
 # Image Version/Tag
 IMAGE_VERSION="latest"
