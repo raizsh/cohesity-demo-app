@@ -14,9 +14,11 @@ import (
   "os"
   "path/filepath"
   "sync"
-
+  
+  "github.com/cohesity/app-sdk-go/appsdk"
   appModels "github.com/cohesity/app-sdk-go/models"
   managementModels "github.com/cohesity/management-sdk-go/models"
+  "github.com/cohesity/management-sdk-go/managementsdk"
   "github.com/go-martini/martini"
   "github.com/golang/glog"
   "github.com/raizsh/cohesity-demo-app/data"
